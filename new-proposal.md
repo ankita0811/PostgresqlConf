@@ -48,4 +48,8 @@ Instance Health Metrics
 
 MT-PostgreSQL-as-a-Service supports tenant based logging for audit and troubleshooting purposes. Tenant database logs are pushed to a centralized system, enabling dev ops to debug any issue irrespective of instance availability.
 
-### Alerting
+### Alerting-System
+Alerting-module raise alerts when some undesired state is reported, like primary-server-not-available, replication-down, disk-size-threshold-crossed, backup-failed etc.
+
+![N|Solid](https://github.com/ankita0811/PostgresqlConf/blob/master/avs.png?raw=true)
+![N|Solid](https://github.com/ankita0811/PostgresqlConf/blob/master/alert.png?raw=true) 
