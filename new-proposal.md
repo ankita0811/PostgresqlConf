@@ -12,9 +12,7 @@ MT-PostgreSQL-as-a-Service is materialized in SCP by defining database as the Mu
 ![N|Solid](https://github.com/ankita0811/PostgresqlConf/blob/master/clustersetup.png?raw=true)
 
 ### Security and Isolation
-A separate membership role is created for each tenant database. Cloud applications are provided with separate username and password to access tenant databases. Tenant users are only entitled to connect to their own database. Privileges for database and role creation are not provided to tenant users.
- 
-An applications connected to a tenant database cannot perform any operation on objects of another tenant database co-located on the same postgresql instance.  
+Each dedicated-PostgreSQL-as-a-Service is associated with one or more __security groups__, wihch acts as a virtual firewall that controls the traffic to instance vms. Isolation among PostgreSQL-as-a-Service instances is achieved using iptables-manager module which ensures that only instance VMs will be able to communicate among themselves. Futher isolation for MT-PostgreSQL-as-a-Service is realized by providing unique membership role for each tenant MTU. Cloud applications are provided with separate username and password via MT-PostgreSQL-as-a-Service binding. Tenant users are only entitled to connect to their own MTU (database) and are stripped off any additional privileges like database/role creation. SCP ensures that an application connected to a given MT-PostgreSQL-as-a-Service instance cannot perform any operation on objects owned by another MT-PostgreSQL-as-a-Service instance multiplexed into a given dedicated PostgreSQL-as-a-Service instance.
 
 
 ### Tenant Admission Control
