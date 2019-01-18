@@ -32,7 +32,7 @@ MT-PostgreSQL-as-a-Service also supports Point-In-Time-Recovery (PITR) using WAL
 
 ### Tenant-Based-Monitoring
 
-MT-PostgreSQL-as-a-Service supports tenant level health monitoring. Monitoring agent running on instance reports health of every tenant. It reports metrics like bulk reads, bulk writes, connections used etc [check with dynatrace image]. It also reports various system specific metrics like CPU, Memory, Disk usage etc.
+MT-PostgreSQL-as-a-Service supports tenant level health monitoring. Monitoring agent running on instance reports health of every tenant. It reports metrics like bulk reads, bulk writes, connections used etc. It also reports various system specific metrics like CPU, Memory, Disk usage etc.
 
 The monitoring agent collects this information and reports it to centralized monitoring server, which stores in a time-series-database. A monitoring-web-application shows metrics via various charts so that devops can identify the tenant health at any given time-date range.
 
