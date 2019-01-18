@@ -21,14 +21,14 @@ Futher isolation for MT-PostgreSQL-as-a-Service is realized by providing unique 
  
 Available disk is a key factor for successful tenant creation. To prevent process from crashing, 90% disk full is used as a limiting factor, beyond which writes will be blocked. Requirement for successful tenant creation is to have some disk free e.g. 5 GB in addition to 10% of free disk to avoid running out of disk immediately after creation.
 
-### Disaster-Recovery/Data-Protection-using-Backup-and-Restore
+### Disaster-Recovery/Data-Protection
 
 #### Tenant-Based-Backup-And-Restore :
 
-Multitenant-Postgresql-as-a-Service supports tenant based scheduled backup and restore. Tenant backups (db dump) are archived on cloud storage. On AWS/GCP/AZURE snapshots are used to archive the backups. In case of Openstack, backup is taken by copying  and compressing data directory.
+Multitenant-Postgresql-as-a-Service supports tenant based scheduled backup and restore. Tenant backups (db dumps) are archived on cloud storage. On AWS/GCP/AZURE snapshots are used to archive the backups. In case of OpenStack, backup is taken by copying  and compressing data directory.
 
-#### Tenant based PITR : 
-Multitenant-Postgresql-as-a-Service also supports Point-In-Time-Recovery (PITR) using WAL archiving. A base backup along with WAL files are archived on cloud storage. Tenant data up to past 15 minutes can be restored.
+#### Tenant-based-PITR : 
+Multitenant-Postgresql-as-a-Service also supports Point-In-Time-Recovery (PITR) using WAL archiving. Base backups along with WAL files are archived on cloud storage. Tenant data up to past 15 minutes can be restored.
 
 
 ### Tenant-Based-Monitoring
