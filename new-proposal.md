@@ -18,7 +18,7 @@ Futher isolation in MT-PostgreSQL-as-a-Service is realized by providing unique m
 
 ### Tenant-Admission-Control
  
-Sever admission-control measures like connection_limits, disk_size_limits are built-in to MT-PostgreSQL-as-a-Service. For e.g. write requests are blocked when disk_size crosses a configured threshold to prevent postgress process crashes. Connection_limits are enforced at MTU level to prevent connection hogging.
+Several admission-control measures like connection_limits, disk_size_limits are built-in to MT-PostgreSQL-as-a-Service. For e.g. write requests are blocked when disk_size crosses a configured threshold to prevent postgress process crashes. Connection_limits are enforced at MTU level to prevent connection hogging.
 
 ### Disaster-Recovery/Data-Protection-using-Backup-and-Restore
 
